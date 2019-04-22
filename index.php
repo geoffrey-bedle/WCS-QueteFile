@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
         $size = $_FILES['upload']['size'][$i];
         $file = $_FILES['upload']['name'][$i];
         $type = $_FILES['upload']['type'][$i];
-        $types=['image/jpeg','image/png'];
+        $types=['image/jpeg','image/png','image/gif'];
 
         if (($size < $maxi_size) && (in_array($type,$types))) {
 

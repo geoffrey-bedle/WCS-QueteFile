@@ -7,8 +7,9 @@ if (isset($_GET['image'])) {
     unlink($road);
 }
 $files = scandir('upload');
-
-
+?>
+<div class="row">
+    <?php
 foreach ($files as $file => $data) {
 
     if ($data != '.' && $data != '..') {
@@ -30,6 +31,7 @@ foreach ($files as $file => $data) {
     }
 }
 ?>
+</div>
 <a href="index.php">
     <button class="btn btn-primary" style="margin-top: 30px">Retour</button>
 </a>
