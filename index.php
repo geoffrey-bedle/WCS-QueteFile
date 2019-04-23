@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
             $name = $_FILES['upload']['name'][$i];
             $infos = new SplFileInfo($name);
             $ext = $infos->getExtension();
-            $filename = 'image' . str_replace('/tmp/php', '', $_FILES['upload']['tmp_name'][$i]) . '.' . $ext;
+            $filename = 'image_'.uniqid().'.' . $ext;
             echo '<img style="width:100px" src="upload/'.$filename.'"><h3 style="color:green">Ton fichier ' . $file . ' de taille ' . $size . ' Mo est bien enregistré !</h3><br><br>';
 
             //var_dump (pathinfo($_FILES['upload']['name'][$i]));
